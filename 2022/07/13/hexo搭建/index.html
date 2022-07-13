@@ -19,10 +19,13 @@
     <link rel="dns-prefetch" href="http://example.com">
     <!--SEO-->
 
-<meta name="keywords" content="" />
+<meta name="keywords" content="hexo,博客" />
 
 
-<meta name="description" content="" />
+<meta name="description" content="# 介绍
+由于我以前那个博客是由阿里云的服务器搭建的，但是服务器太贵了，我就利用 github 搭建 hexo。
+优点：白嫖、访问速度还行
+缺点：搭建比较麻烦，写文章变得很痛苦（你用了就知道了）..." />
 
 
 <meta name="robots" content="all" />
@@ -33,7 +36,7 @@
 
 <title>
     
-    Tag: web |
+    github搭建hexo |
     
     Hexo
 </title>
@@ -136,163 +139,126 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content ">
-                    <ol class="breadcrumb">
-    
-    <li>
-        web
-    </li>
-    
-    
-</ol>
-
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
 <article class="post">
+    <div class="post-head">
+        <h1 id="github搭建hexo">
+            
+            github搭建hexo
+            
+        </h1>
+        <div class="post-meta">
     
-    <div class="post-content">
-        <div class="post-head home-post-head">
-            <h1 class="post-title">
-                <a href="/2022/07/12/hello-world/">
-                    Hello World</a>
-            </h1>
-            <div class="post-meta"> &bull;
-                <time class="post-date" datetime="" title="">
-                    2022年07月12日
-                </time>
-            </div>
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a class="category-link" href="/categories/art/">art</a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a class="tag-none-link" href="/tags/hexo/" rel="tag">hexo</a> <a class="tag-none-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a>
+            
+        </span>
+    </span>
+    
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">
+            2022/07/13</span>
+    </span>
+    
+    <span class="fa-wrap">
+        <i class="fa fa-eye"></i>
+        <span id="busuanzi_value_page_pv"></span>
+    </span>
+    
+    
+</div>
+        
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="介绍"><a class="markdownIt-Anchor" href="#介绍">#</a> 介绍</h2>
+<p>由于我以前那个博客是由阿里云的服务器搭建的，但是服务器太贵了，我就利用 github 搭建 hexo。</p>
+<p>优点：白嫖、访问速度还行<br>
+缺点：搭建比较麻烦，写文章变得很痛苦（你用了就知道了）</p>
+<h2 id="搭建"><a class="markdownIt-Anchor" href="#搭建">#</a> 搭建</h2>
+<h4 id="1环境准备"><a class="markdownIt-Anchor" href="#1环境准备">#</a> 1. 环境准备</h4>
+<p>Node.js：<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">https://nodejs.org/zh-cn</a><br>
+Git：<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p>
+<p>这两个环境搭建就不用说了吧（安装时一直点击下一步）<br>
+<img src="C:%5CUsers%5C%E4%BB%A3%E6%98%8C%E8%B1%AA%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220713163303525.png" alt="image-20220713163303525"></p>
+<h4 id="2连接github"><a class="markdownIt-Anchor" href="#2连接github">#</a> 2. 连接 github</h4>
+<h5 id="注册github账号"><a class="markdownIt-Anchor" href="#注册github账号">#</a> 注册 github 账号</h5>
+<p>注册我就不写教程了，直接利用邮箱注册，选择免费账户，就可以了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">win+r打开cmd输入一下命令，如果不行的话就右键你的hexo文件夹，Git Bash Here。</span><br><span class="line">git config --global user.name &quot;Github 用户名&quot;</span><br><span class="line">git config --global user.email &quot;Github 邮箱&quot;</span><br></pre></td></tr></table></figure>
+<h5 id="创建ssh密钥"><a class="markdownIt-Anchor" href="#创建ssh密钥">#</a> 创建 ssh 密钥</h5>
+<p>在命令框输入<font color='red'>ssh-keygen -t rsa -C “Github 邮箱”</font>，然后一直回车。</p>
+<h5 id="添加密钥"><a class="markdownIt-Anchor" href="#添加密钥">#</a> 添加密钥</h5>
+<p>进入刚刚创建密钥的目录（如果没有看到勾选 “显示隐藏项目试试”），用记事本打开 id_rsa.pub 文件并复制里面的内容。<br>
+<img src="C:%5CUsers%5C%E4%BB%A3%E6%98%8C%E8%B1%AA%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220713164713074.png" alt="image-20220713164713074"></p>
+
+    </div>
+    
+    <div class="reward" ontouchstart>
+    <div class="reward-wrap">赏
+        <div class="reward-box">
+            
+            
+            <span class="reward-type">
+                <img class="wechat" src="../img/reward-wepay.jpg"><b>微信打赏</b>
+            </span>
+            
         </div>
-        <p class="brief">
+    </div>
+    <p class="reward-tip">
+        赞赏是不耍流氓的鼓励
+    </p>
+</div>
+    
+    <div class="post-footer">
+        <div>
             
-            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using ...
+            转载声明：
+            商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
             
-        </p>
+            
+        </div>
+        <div>
+            
+        </div>
     </div>
 </article>
-
-
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+    <a href="/2022/07/12/hello-world/" class="next-post btn btn-default" title='Hello World'>
+        <span class="hidden-lg">下一篇</span>
+        <span class="hidden-xs">
+            Hello World</span><i class="fa fa-angle-right fa-fw"></i>
+    </a>
+    
+</div>
 
                 </main>
                 
-                    
-<aside class="col-md-4 sidebar">
-    
-    
-<div class="widget">
-    <h3 class="title">
-        Search
-    </h3>
-    <div id="search-form">
-        <div id="result-mask" class="hide"></div>
-        <div class="search-area">
-            
-            <input id="search-key" type="search" autocomplete="off" placeholder="Search What？">
-            <button type="button" class="search-form-submit" id="search-local">
-                localSearch</button>
-            
-            
-        </div>
-        <div id="result-wrap" class="hide">
-            <div id="search-result"></div>
-        </div>
-        <div class="hide">
-            <template id="search-tpl">
-                <div class="item">
-                    <a href="/{path}" title="{title}">
-                        <div class="title">{title}</div>
-                        <div class="content">{content}</div>
-                    </a>
-                </div>
-            </template>
-        </div>
-    </div>
-</div>
-
-    
-    
-    
-    
-<div class="widget">
-    <h3 class="title">
-        Social
-    </h3>
-    <div class="content social">
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">
+            Table of Contents
+        </h3>
         
-        <a href="//github.com/pikachuiu" rel="external nofollow" title="Github" target="_blank">
-            <i class="git fa fa-git"></i>
-        </a>
-        
-        <a href="mailto:195744492@qq.com" rel="external nofollow" title="邮箱" target="_blank">
-            <i class="envelope-o fa fa-envelope-o"></i>
-        </a>
-        
-        <a href="//wpa.qq.com/msgrd?v=3&uin=195744492&site=qq&menu=yes" rel="external nofollow" title="联系QQ" target="_blank">
-            <i class="qq fa fa-qq"></i>
-        </a>
-        
-        <a href="/" rel="external nofollow" title="微信" target="_blank">
-            <i class="weixin fa fa-weixin"></i>
-        </a>
-        
-        <a href="/" rel="external nofollow" title="QQ群" target="_blank">
-            <i class="users fa fa-users"></i>
-        </a>
-        
-        <a href="/" rel="external nofollow" title="RSS" target="_blank">
-            <i class="feed fa fa-feed"></i>
-        </a>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text"> 介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA"><span class="toc-text"> 搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="toc-text"> 1. 环境准备</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E8%BF%9E%E6%8E%A5github"><span class="toc-text"> 2. 连接 github</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B3%A8%E5%86%8Cgithub%E8%B4%A6%E5%8F%B7"><span class="toc-text"> 注册 github 账号</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAssh%E5%AF%86%E9%92%A5"><span class="toc-text"> 创建 ssh 密钥</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%AF%86%E9%92%A5"><span class="toc-text"> 添加密钥</span></a></li></ol></li></ol></li></ol></li></ol>
         
     </div>
-</div>
-
-    
-    
-<div class="widget">
-    <h3 class="title">
-        Categories
-    </h3>
-    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/art/"><i class="fa" aria-hidden="true">art</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link current" href="/categories/web/"><i class="fa" aria-hidden="true">web</i></a><span class="category-list-count">1</span></li></ul>
-</div>
-
-    
-    
-<div class="widget">
-    <h3 class="title">
-        Archives
-    </h3>
-    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/"><i class="fa" aria-hidden="true">2022年07月</i></a><span class="archive-list-count">2</span></li></ul>
-</div>
-
-    
-    
-<div class="widget">
-    <h3 class="title">
-        Tag Cloud
-    </h3>
-    <div class="content tag-cloud">
-        
-        <canvas width="300" height="300" id="tag-cloud-3d">
-            <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/web/" style="font-size: 10px;">web</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">博客</a>
-        </canvas>
-        
-    </div>
-</div>
-
-    
-    
-<div class="widget">
-    <h3 class="title">
-        Friends
-    </h3>
-    <div class="content friends-link">
-        
-        <a href="https://hexo.io/zh-cn/" class="fa" target="_blank">
-            Hexo官网</a>
-        
-    </div>
-</div>
-
-    
 </aside>
-
                 
             </div>
         </div>
@@ -339,10 +305,6 @@
         </div>
     </div>
 </div>
-
-
-<script src="/js/search.js?rev=@@hash.js"></script>
-
 
 
 
