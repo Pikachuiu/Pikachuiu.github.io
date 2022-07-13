@@ -9,13 +9,11 @@
         <lastBuildDate>Wed, 13 Jul 2022 16:22:16 +0800</lastBuildDate>
         <category>web</category>
         <category>hexo</category>
-        <category>博客</category>
         <item>
             <guid isPermalink="true">http://example.com/2022/07/13/hexo%E6%90%AD%E5%BB%BA/</guid>
             <title>github搭建hexo</title>
             <link>http://example.com/2022/07/13/hexo%E6%90%AD%E5%BB%BA/</link>
             <category>hexo</category>
-            <category>博客</category>
             <pubDate>Wed, 13 Jul 2022 16:22:16 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#介绍&#34;&gt;#&lt;/a&gt; 介绍&lt;/h2&gt;
 &lt;p&gt;由于我以前那个博客是由阿里云的服务器搭建的，但是服务器太贵了，我就利用 github 搭建 hexo。&lt;/p&gt;
@@ -26,7 +24,7 @@
 &lt;p&gt;Node.js：&lt;a href=&#34;https://nodejs.org/zh-cn&#34;&gt;https://nodejs.org/zh-cn&lt;/a&gt;&lt;br&gt;
 Git：&lt;a href=&#34;https://git-scm.com/downloads&#34;&gt;https://git-scm.com/downloads&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;这两个环境搭建就不用说了吧（安装时一直点击下一步）&lt;br&gt;
-&lt;img src=&#34;C:%5CUsers%5C%E4%BB%A3%E6%98%8C%E8%B1%AA%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220713163303525.png&#34; alt=&#34;image-20220713163303525&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/github%E6%90%AD%E5%BB%BAhexo/1.png&#34; alt=&#34;image-20220713163303525&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;2连接github&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2连接github&#34;&gt;#&lt;/a&gt; 2. 连接 github&lt;/h4&gt;
 &lt;h5 id=&#34;注册github账号&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#注册github账号&#34;&gt;#&lt;/a&gt; 注册 github 账号&lt;/h5&gt;
 &lt;p&gt;注册我就不写教程了，直接利用邮箱注册，选择免费账户，就可以了。&lt;/p&gt;
@@ -35,7 +33,41 @@ Git：&lt;a href=&#34;https://git-scm.com/downloads&#34;&gt;https://git-scm.com/
 &lt;p&gt;在命令框输入&lt;font color=&#39;red&#39;&gt;ssh-keygen -t rsa -C “Github 邮箱”&lt;/font&gt;，然后一直回车。&lt;/p&gt;
 &lt;h5 id=&#34;添加密钥&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#添加密钥&#34;&gt;#&lt;/a&gt; 添加密钥&lt;/h5&gt;
 &lt;p&gt;进入刚刚创建密钥的目录（如果没有看到勾选 “显示隐藏项目试试”），用记事本打开 id_rsa.pub 文件并复制里面的内容。&lt;br&gt;
-&lt;img src=&#34;C:%5CUsers%5C%E4%BB%A3%E6%98%8C%E8%B1%AA%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220713164713074.png&#34; alt=&#34;image-20220713164713074&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/github%E6%90%AD%E5%BB%BAhexo/2.png&#34; alt=&#34;image-20220713164713074&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然后点击 github 的 setting&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/github%E6%90%AD%E5%BB%BAhexo/3.png&#34; alt=&#34;image-20220713164851869&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/github%E6%90%AD%E5%BB%BAhexo/4.png&#34; alt=&#34;image-20220713164924441&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/github%E6%90%AD%E5%BB%BAhexo/5.png&#34; alt=&#34;image-20220713165019575&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/github%E6%90%AD%E5%BB%BAhexo/6.png&#34; alt=&#34;image-20220713165124951&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然后再 cmd 命令框输入&lt;font color=&#39;red&#39;&gt;ssh -T git@github. com&lt;/font&gt;出现了下面这张图的返回数据就成功了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/github%E6%90%AD%E5%BB%BAhexo/7.png&#34; alt=&#34;image-20220713165456420&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;3创建github-pages-仓库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3创建github-pages-仓库&#34;&gt;#&lt;/a&gt; 3. 创建 Github Pages 仓库&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/github%E6%90%AD%E5%BB%BAhexo/8.png&#34; alt=&#34;image-20220713165625286&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/github%E6%90%AD%E5%BB%BAhexo/9.png&#34; alt=&#34;image-20220713165837876&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/github%E6%90%AD%E5%BB%BAhexo/10.png&#34; alt=&#34;image-20220713165939742&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这样就已经创建成功了。&lt;/p&gt;
+&lt;h4 id=&#34;4本地搭建hexo&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4本地搭建hexo&#34;&gt;#&lt;/a&gt; 4. 本地搭建 hexo&lt;/h4&gt;
+&lt;p&gt;使用&lt;font color=&#39;red&#39;&gt;npm install -g hexo-cli&lt;/font&gt;&amp;gt; 命令安装 hexo，可以使用 hexo -v 查看版本信息，下载 hexo 框架，可以使用官网的一键配置命令，也可以再官网下载。&lt;br&gt;
+&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/github%E6%90%AD%E5%BB%BAhexo/11.png&#34; alt=&#34;image-20220713185044268&#34;&gt;&lt;/p&gt;
+&lt;p&gt;使用这个命令一键下载，下载好进入 hexo 目录使用&lt;font color=&#39;red&#39;&gt;hexo install&lt;/font&gt;命令初始化，使用&lt;font color=&#39;red&#39;&gt;hexo s&lt;/font&gt;&amp;gt; 命令在本地开启 http 服务，访问 http://localhost:4000 就能看到网站了。&lt;br&gt;
+&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/github%E6%90%AD%E5%BB%BAhexo/12.png&#34; alt=&#34;image-20220713185341589&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;5部署到github上&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5部署到github上&#34;&gt;#&lt;/a&gt; 5. 部署到 github 上&lt;/h4&gt;
+&lt;p&gt;进入 hexo 目录下打开_config.yml 文件&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/github%E6%90%AD%E5%BB%BAhexo/13.png&#34; alt=&#34;image-20220713185511189&#34;&gt;&lt;/p&gt;
+&lt;p&gt;滑到最后，配置连接 github 仓库的参数。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/github%E6%90%AD%E5%BB%BAhexo/14.png&#34; alt=&#34;image-20220713185756698&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/github%E6%90%AD%E5%BB%BAhexo/15.png&#34; alt=&#34;image-20220713185838243&#34;&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;deploy:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  type: git //这里就填git，应为我们是利用git工具提交到仓库的&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  repo:  //这里直接复制github仓库的ssh连接就可以了&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  branch: main //这里是仓库有两个分子，这里需要注意如果提交main没有反应就提交master&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/github%E6%90%AD%E5%BB%BAhexo/16.png&#34; alt=&#34;image-20220713185959693&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这样就好了，我们在本地就布置好了&lt;br&gt;
+我们使用一下三个命令&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo clean //清楚缓存&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo g //重新生成改动的文件&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo d //上传到github仓库&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;使用后访问&lt;font color=&#39;red&#39;&gt;用户名.github.io&lt;/font&gt;就可以了，提交后要过一会它才会加载出来不要着急&lt;/p&gt;
+&lt;p&gt;这样就已经简单的搭建好了，后面会慢慢更新的&lt;/p&gt;
+&lt;p&gt;如何安装主题&lt;br&gt;
+如何发布文章&lt;br&gt;
+ hexo 常用命令&lt;br&gt;
+常见的问题&lt;/p&gt;
  ]]></description>
         </item>
     </channel>
