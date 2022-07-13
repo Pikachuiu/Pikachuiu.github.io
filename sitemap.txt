@@ -1,7 +1,4 @@
 http://example.com/2022/07/13/hexo%E6%90%AD%E5%BB%BA/
-http://example.com/2022/07/12/hello-world/
 http://example.com/
-http://example.com/tags/web/
 http://example.com/tags/hexo/
-http://example.com/categories/web/
 http://example.com/categories/art/
