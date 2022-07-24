@@ -19,10 +19,16 @@
     <link rel="dns-prefetch" href="http://example.com">
     <!--SEO-->
 
-<meta name="keywords" content="" />
+<meta name="keywords" content="vmware tools安装报错" />
 
 
-<meta name="description" content="" />
+<meta name="description" content="# 配置信息
+VMware® Workstation 16 Pro：16.2.4 build-20089737
+操作系统：windows7
+# 报错
+# 1. 无法安装 tools
+
+解决方法：..." />
 
 
 <meta name="robots" content="all" />
@@ -33,7 +39,7 @@
 
 <title>
     
-    Tag: hexo |
+    Windows7安装vmware tools报错 |
     
     Pikachu
 </title>
@@ -136,169 +142,142 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content ">
-                    <ol class="breadcrumb">
-    
-    <li>
-        hexo
-    </li>
-    
-    
-</ol>
-
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
 <article class="post">
+    <div class="post-head">
+        <h1 id="Windows7安装vmware tools报错">
+            
+            Windows7安装vmware tools报错
+            
+        </h1>
+        <div class="post-meta">
     
-    <div class="post-content">
-        <div class="post-head home-post-head">
-            <h1 class="post-title">
-                <a href="/2022/07/13/hexo%E6%90%AD%E5%BB%BA/">
-                    github搭建hexo</a>
-            </h1>
-            <div class="post-meta"> &bull;
-                <time class="post-date" datetime="" title="">
-                    2022年07月13日
-                </time>
-            </div>
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a class="tag-none-link" href="/tags/vmware-tools%E5%AE%89%E8%A3%85%E6%8A%A5%E9%94%99/" rel="tag">vmware tools安装报错</a>
+            
+        </span>
+    </span>
+    
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">
+            2022/07/24</span>
+    </span>
+    
+    <span class="fa-wrap">
+        <i class="fa fa-eye"></i>
+        <span id="busuanzi_value_page_pv"></span>
+    </span>
+    
+    
+</div>
+        
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="配置信息"><a class="markdownIt-Anchor" href="#配置信息">#</a> 配置信息</h2>
+<p>VMware® Workstation 16 Pro：16.2.4 build-20089737</p>
+<p>操作系统：windows7</p>
+<h2 id="报错"><a class="markdownIt-Anchor" href="#报错">#</a> 报错</h2>
+<h4 id="1无法安装tools"><a class="markdownIt-Anchor" href="#1无法安装tools">#</a> 1. 无法安装 tools</h4>
+<p><img src="https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/vmware%E5%AE%89%E8%A3%85tools%E5%A4%B1%E8%B4%A5/1.png" alt="image-20220724144701483"></p>
+<p>解决方法：这个解决方法特别简单就是删除软盘就可以了</p>
+<p><img src="https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/vmware%E5%AE%89%E8%A3%85tools%E5%A4%B1%E8%B4%A5/2.png" alt="image-20220724145007145"></p>
+<h4 id="2在安装过程中驱动签名出现了问题"><a class="markdownIt-Anchor" href="#2在安装过程中驱动签名出现了问题">#</a> 2. 在安装过程中驱动签名出现了问题</h4>
+<p><img src="https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/vmware%E5%AE%89%E8%A3%85tools%E5%A4%B1%E8%B4%A5/3.png" alt="image-20220724145627597"></p>
+<p><img src="https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/vmware%E5%AE%89%E8%A3%85tools%E5%A4%B1%E8%B4%A5/4.png" alt="image-20220724145647274"></p>
+<p>解决方法：微软在 2019 年更新了驱动程序签名的算法，把 SHA1 改用成 SHA2，然而 Windows7 只支持 SHA1，可是 vmware 是 SHA2，我们下载 SHA2 补丁就可以了 kb4474419</p>
+<p>地址：<a target="_blank" rel="noopener" href="https://www.catalog.update.microsoft.com/Search.aspx?q=kb4474419">https://www.catalog.update.microsoft.com/Search.aspx?q=kb4474419</a></p>
+<p>在后续的搭建环境过程中可能会遇到许多的问题，我会结合起来一直更新</p>
+
+    </div>
+    
+    <div class="reward" ontouchstart>
+    <div class="reward-wrap">赏
+        <div class="reward-box">
+            
+            
+            <span class="reward-type">
+                <img class="wechat" src="/img/reward-wepay.jpg"><b>微信打赏</b>
+            </span>
+            
         </div>
-        <p class="brief">
+    </div>
+    <p class="reward-tip">
+        赞赏是不耍流氓的鼓励
+    </p>
+</div>
+    
+    <div class="post-footer">
+        <div>
             
-            # 介绍
-由于我以前那个博客是由阿里云的服务器搭建的，但是服务器太贵了，我就利用 github 搭建 hexo。
-优点：白嫖、访问速度还行
-缺点：搭建比较麻烦，写文章变得很痛苦（你用了就知道了）
-# 搭建
-# 1. 环境准备
-Node...
+            转载声明：
+            商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Pikachuiu</a>
             
-        </p>
+            
+        </div>
+        <div>
+            
+        </div>
     </div>
 </article>
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+    <a href="/2022/07/21/phpstudy%E5%90%8E%E9%97%A8/" class="next-post btn btn-default" title='phpstudy后门漏洞复现'>
+        <span class="hidden-lg">下一篇</span>
+        <span class="hidden-xs">
+            phpstudy后门漏洞复现</span><i class="fa fa-angle-right fa-fw"></i>
+    </a>
+    
+</div>
+
+<div id="comments">
+    
+    
+<div class="utteranc">
+  
+  <script
+    src='https://utteranc.es/client.js'
+    repo='shenliyang/snippet-comment'
+    issue-term='pathname'
+    issue-number=''
+    theme='github-light'
+    label=''
+    crossorigin='anonymous'
+    async
+  ></script>
+</div>
 
 
+
+</div>
 
                 </main>
                 
-                    
-<aside class="col-md-4 sidebar">
-    
-    
-<div class="widget">
-    <h3 class="title">
-        Search
-    </h3>
-    <div id="search-form">
-        <div id="result-mask" class="hide"></div>
-        <div class="search-area">
-            
-            <input id="search-key" type="search" autocomplete="off" placeholder="Search What？">
-            <button type="button" class="search-form-submit" id="search-local">
-                localSearch</button>
-            
-            
-        </div>
-        <div id="result-wrap" class="hide">
-            <div id="search-result"></div>
-        </div>
-        <div class="hide">
-            <template id="search-tpl">
-                <div class="item">
-                    <a href="/{path}" title="{title}">
-                        <div class="title">{title}</div>
-                        <div class="content">{content}</div>
-                    </a>
-                </div>
-            </template>
-        </div>
-    </div>
-</div>
-
-    
-    
-    
-    
-<div class="widget">
-    <h3 class="title">
-        Social
-    </h3>
-    <div class="content social">
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">
+            Table of Contents
+        </h3>
         
-        <a href="//github.com/pikachuiu" rel="external nofollow" title="Github" target="_blank">
-            <i class="git fa fa-git"></i>
-        </a>
-        
-        <a href="mailto:195744492@qq.com" rel="external nofollow" title="邮箱" target="_blank">
-            <i class="envelope-o fa fa-envelope-o"></i>
-        </a>
-        
-        <a href="//wpa.qq.com/msgrd?v=3&uin=195744492&site=qq&menu=yes" rel="external nofollow" title="联系QQ" target="_blank">
-            <i class="qq fa fa-qq"></i>
-        </a>
-        
-        <a href="/" rel="external nofollow" title="微信" target="_blank">
-            <i class="weixin fa fa-weixin"></i>
-        </a>
-        
-        <a href="/" rel="external nofollow" title="QQ群" target="_blank">
-            <i class="users fa fa-users"></i>
-        </a>
-        
-        <a href="/" rel="external nofollow" title="RSS" target="_blank">
-            <i class="feed fa fa-feed"></i>
-        </a>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF"><span class="toc-text"> 配置信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%A5%E9%94%99"><span class="toc-text"> 报错</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85tools"><span class="toc-text"> 1. 无法安装 tools</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E5%9C%A8%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%A9%B1%E5%8A%A8%E7%AD%BE%E5%90%8D%E5%87%BA%E7%8E%B0%E4%BA%86%E9%97%AE%E9%A2%98"><span class="toc-text"> 2. 在安装过程中驱动签名出现了问题</span></a></li></ol></li></ol></li></ol>
         
     </div>
-</div>
-
-    
-    
-<div class="widget">
-    <h3 class="title">
-        Categories
-    </h3>
-    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/art/"><i class="fa" aria-hidden="true">art</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/"><i class="fa" aria-hidden="true">web</i></a><span class="category-list-count">1</span></li></ul>
-</div>
-
-    
-    
-<div class="widget">
-    <h3 class="title">
-        Archives
-    </h3>
-    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/"><i class="fa" aria-hidden="true">2022年07月</i></a><span class="archive-list-count">3</span></li></ul>
-</div>
-
-    
-    
-<div class="widget">
-    <h3 class="title">
-        Tag Cloud
-    </h3>
-    <div class="content tag-cloud">
-        
-        <canvas width="300" height="300" id="tag-cloud-3d">
-            <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/phpstudy%E5%90%8E%E9%97%A8%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/" style="font-size: 10px;">phpstudy后门漏洞复现</a> <a href="/tags/vmware-tools%E5%AE%89%E8%A3%85%E6%8A%A5%E9%94%99/" style="font-size: 10px;">vmware tools安装报错</a>
-        </canvas>
-        
-    </div>
-</div>
-
-    
-    
-<div class="widget">
-    <h3 class="title">
-        Friends
-    </h3>
-    <div class="content friends-link">
-        
-        <a href="https://hexo.io/zh-cn/" class="fa" target="_blank">
-            Hexo官网</a>
-        
-    </div>
-</div>
-
-    
 </aside>
-
                 
             </div>
         </div>
@@ -345,10 +324,6 @@ Node...
         </div>
     </div>
 </div>
-
-
-<script src="/js/search.js?rev=@@hash.js"></script>
-
 
 
 

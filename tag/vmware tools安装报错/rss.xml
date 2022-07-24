@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Pikachu • Posts by &#34;vmware tools安装报错&#34; tag</title>
+        <link>http://example.com</link>
+        <description></description>
+        <language>en</language>
+        <pubDate>Sun, 24 Jul 2022 11:06:47 +0800</pubDate>
+        <lastBuildDate>Sun, 24 Jul 2022 11:06:47 +0800</lastBuildDate>
+        <category>vmware tools安装报错</category>
+        <category>hexo</category>
+        <category>phpstudy后门漏洞复现</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/07/24/Windows7%E5%AE%89%E8%A3%85vmware-tools%E6%8A%A5%E9%94%99/</guid>
+            <title>Windows7安装vmware tools报错</title>
+            <link>http://example.com/2022/07/24/Windows7%E5%AE%89%E8%A3%85vmware-tools%E6%8A%A5%E9%94%99/</link>
+            <category>vmware tools安装报错</category>
+            <pubDate>Sun, 24 Jul 2022 11:06:47 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;配置信息&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置信息&#34;&gt;#&lt;/a&gt; 配置信息&lt;/h2&gt;
+&lt;p&gt;VMware® Workstation 16 Pro：16.2.4 build-20089737&lt;/p&gt;
+&lt;p&gt;操作系统：windows7&lt;/p&gt;
+&lt;h2 id=&#34;报错&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#报错&#34;&gt;#&lt;/a&gt; 报错&lt;/h2&gt;
+&lt;h4 id=&#34;1无法安装tools&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1无法安装tools&#34;&gt;#&lt;/a&gt; 1. 无法安装 tools&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/vmware%E5%AE%89%E8%A3%85tools%E5%A4%B1%E8%B4%A5/1.png&#34; alt=&#34;image-20220724144701483&#34;&gt;&lt;/p&gt;
+&lt;p&gt;解决方法：这个解决方法特别简单就是删除软盘就可以了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/vmware%E5%AE%89%E8%A3%85tools%E5%A4%B1%E8%B4%A5/2.png&#34; alt=&#34;image-20220724145007145&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;2在安装过程中驱动签名出现了问题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2在安装过程中驱动签名出现了问题&#34;&gt;#&lt;/a&gt; 2. 在安装过程中驱动签名出现了问题&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/vmware%E5%AE%89%E8%A3%85tools%E5%A4%B1%E8%B4%A5/3.png&#34; alt=&#34;image-20220724145627597&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/vmware%E5%AE%89%E8%A3%85tools%E5%A4%B1%E8%B4%A5/4.png&#34; alt=&#34;image-20220724145647274&#34;&gt;&lt;/p&gt;
+&lt;p&gt;解决方法：微软在 2019 年更新了驱动程序签名的算法，把 SHA1 改用成 SHA2，然而 Windows7 只支持 SHA1，可是 vmware 是 SHA2，我们下载 SHA2 补丁就可以了 kb4474419&lt;/p&gt;
+&lt;p&gt;地址：&lt;a href=&#34;https://www.catalog.update.microsoft.com/Search.aspx?q=kb4474419&#34;&gt;https://www.catalog.update.microsoft.com/Search.aspx?q=kb4474419&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在后续的搭建环境过程中可能会遇到许多的问题，我会结合起来一直更新&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
