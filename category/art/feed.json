@@ -5,6 +5,16 @@
     "home_page_url": "http://example.com",
     "items": [
         {
+            "id": "http://example.com/2022/07/24/Windows7%E5%AE%89%E8%A3%85vmware-tools%E6%8A%A5%E9%94%99/",
+            "url": "http://example.com/2022/07/24/Windows7%E5%AE%89%E8%A3%85vmware-tools%E6%8A%A5%E9%94%99/",
+            "title": "Windows7安装vmware tools报错",
+            "date_published": "2022-07-24T03:06:47.000Z",
+            "content_html": "<h2 id=\"配置信息\"><a class=\"markdownIt-Anchor\" href=\"#配置信息\">#</a> 配置信息</h2>\n<p>VMware® Workstation 16 Pro：16.2.4 build-20089737</p>\n<p>操作系统：windows7</p>\n<h2 id=\"报错\"><a class=\"markdownIt-Anchor\" href=\"#报错\">#</a> 报错</h2>\n<h4 id=\"1无法安装tools\"><a class=\"markdownIt-Anchor\" href=\"#1无法安装tools\">#</a> 1. 无法安装 tools</h4>\n<p><img src=\"https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/vmware%E5%AE%89%E8%A3%85tools%E5%A4%B1%E8%B4%A5/1.png\" alt=\"image-20220724144701483\"></p>\n<p>解决方法：这个解决方法特别简单就是删除软盘就可以了</p>\n<p><img src=\"https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/vmware%E5%AE%89%E8%A3%85tools%E5%A4%B1%E8%B4%A5/2.png\" alt=\"image-20220724145007145\"></p>\n<h4 id=\"2在安装过程中驱动签名出现了问题\"><a class=\"markdownIt-Anchor\" href=\"#2在安装过程中驱动签名出现了问题\">#</a> 2. 在安装过程中驱动签名出现了问题</h4>\n<p><img src=\"https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/vmware%E5%AE%89%E8%A3%85tools%E5%A4%B1%E8%B4%A5/3.png\" alt=\"image-20220724145627597\"></p>\n<p><img src=\"https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/vmware%E5%AE%89%E8%A3%85tools%E5%A4%B1%E8%B4%A5/4.png\" alt=\"image-20220724145647274\"></p>\n<p>解决方法：微软在 2019 年更新了驱动程序签名的算法，把 SHA1 改用成 SHA2，然而 Windows7 只支持 SHA1，可是 vmware 是 SHA2，我们下载 SHA2 补丁就可以了 kb4474419</p>\n<p>地址：<a href=\"https://www.catalog.update.microsoft.com/Search.aspx?q=kb4474419\">https://www.catalog.update.microsoft.com/Search.aspx?q=kb4474419</a></p>\n<p>在后续的搭建环境过程中可能会遇到许多的问题，我会结合起来一直更新</p>\n",
+            "tags": [
+                "vmware tools安装报错"
+            ]
+        },
+        {
             "id": "http://example.com/2022/07/13/hexo%E6%90%AD%E5%BB%BA/",
             "url": "http://example.com/2022/07/13/hexo%E6%90%AD%E5%BB%BA/",
             "title": "github搭建hexo",
