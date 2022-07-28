@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-07-24T08:30:01.405Z</updated>
+  <updated>2022-07-28T10:44:01.321Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>esp-8200制作wifi杀手</title>
+    <link href="http://example.com/2022/07/28/esp%208266%E5%88%B6%E4%BD%9Cwifi%E6%9D%80%E6%89%8B/"/>
+    <id>http://example.com/2022/07/28/esp%208266%E5%88%B6%E4%BD%9Cwifi%E6%9D%80%E6%89%8B/</id>
+    <published>2022-07-28T05:21:57.000Z</published>
+    <updated>2022-07-28T10:44:01.321Z</updated>
+    
+    <content type="html"><![CDATA[<p>所需工具下载：<a href="https://pan.baidu.com/s/1q7BB-8wZKcJey0ZKwWeTKg">https://pan.baidu.com/s/1q7BB-8wZKcJey0ZKwWeTKg</a> 提取码 nll8<br> 官方地址：<a href="https://github.com/spacehuhn/esp8266_deauther">https://github.com/spacehuhn/esp8266_deauther</a></p><h2 id="介绍"><a class="markdownIt-Anchor" href="#介绍">#</a> 介绍</h2><h4 id="前言"><a class="markdownIt-Anchor" href="#前言">#</a> 前言</h4><p>今天才想起我之前再某宝买过一块 esp 8266，就想着出一期制作 WiFi 杀手的教程。</p><h4 id="什么是esp8266"><a class="markdownIt-Anchor" href="#什么是esp8266">#</a> 什么是 ESP8266</h4><p>ESP8266 是基于 arduino 开发的单片机，专为移动设备、可穿戴电子产品和物联应用设计，并于其它几项专利技术一起使用机器实现最低能耗。为满足移动设备和设备和可穿戴性电子产品的功率需求，ESP8266 在近距离时可以通过软件编程减少 PA 的输出功率来减低整体功率，以适应不同的应用方案。</p><p>可应用于只能电源插头，家庭自动化，网状网络，工业无线控制，婴儿控制器，网络摄像机，传感器网络，可穿戴电子产品，无线位置感知设备，安全 ID 标签，无线定位系统信号等方面。</p><h4 id="deauther介绍"><a class="markdownIt-Anchor" href="#deauther介绍">#</a> deauther 介绍</h4><p>deauther 是一个开源项目，用来测试 802.11 标准中的常见漏洞。</p><p>802.11WiFi 协议包含了一个 Deauthentiation 特性，起作用就是为了将用户从网络中分离。攻击者可随时使用无线 AP 的伪造源地址，想发射站发送一个 Deauthentication 攻击数据包。</p><p>该协议不需要对 Deauthentication 攻击框架进行加密，甚至是建立会话。该漏洞在 802.11w-2009 中有提议解决，但几乎所有厂商在默认情况下都将其设置为禁用状态。</p><h2 id="准备工作"><a class="markdownIt-Anchor" href="#准备工作">#</a> 准备工作</h2><h4 id="硬件"><a class="markdownIt-Anchor" href="#硬件">#</a> 硬件</h4><p>1.esp 8266 或者其它的 NodeMcu 开发板也行（在某宝或者某多买就 10 几块）<br>2. 一条数据线，你买的时候商家应该会有送你一个数据线（MicroUSB）</p><h4 id="软件"><a class="markdownIt-Anchor" href="#软件">#</a> 软件</h4><p>1.CP2102 或 CP340 驱动<br> 2.Arduino1.8x<br>3.ESP8266Flasher（可选）<br>4.esp8266_deauther</p><h2 id="开始制作"><a class="markdownIt-Anchor" href="#开始制作">#</a> 开始制作</h2><p>官网提供了两种刷入方式，一种是利用 ESP8266Flasher 软件将 bin 固件烧录进板子，方法简单，便于操作。另一种是搭建 arduino 环境，将代码进行修改。我是用的是第一种方法</p><p>在设备管理器中查看 esp8622 端口，然后再 flash 中 operation 选择正确的端口</p><p><img src="https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/esp6822%E5%88%B6%E4%BD%9CWiFi%E6%9D%80%E6%89%8B/1.png" alt="image-20220728162725055"></p><p>点击 config，点击第一个齿轮</p><p><img src="https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/esp6822%E5%88%B6%E4%BD%9CWiFi%E6%9D%80%E6%89%8B/2.png" alt="image-20220728163042451"></p><p>选择 bin 软件下载</p><p><img src="https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/esp6822%E5%88%B6%E4%BD%9CWiFi%E6%9D%80%E6%89%8B/3.png" alt="image-20220728163128819"></p><p>Advanced 配置</p><p><img src="https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/esp6822%E5%88%B6%E4%BD%9CWiFi%E6%9D%80%E6%89%8B/4.png" alt="image-20220728173406424"></p><p>返回 operation 点击 flash，等进度条完成</p><h2 id="使用方法"><a class="markdownIt-Anchor" href="#使用方法">#</a> 使用方法</h2><p>把 esp8622 插入 usb 插口中，连接 esp8622 的 WiFi，WiFi 名为 pwned，默认密码 deauter。(我用的是被人师傅已经翻译好的中文版密码为 zhangguanzhang)</p><p>连接完成，访问网关 ip</p><p><img src="https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/esp6822%E5%88%B6%E4%BD%9CWiFi%E6%9D%80%E6%89%8B/5.png" alt="image-20220728163948671"></p><p><img src="https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/esp6822%E5%88%B6%E4%BD%9CWiFi%E6%9D%80%E6%89%8B/6.png" alt="image-20220728164015661"></p><p><img src="https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/esp6822%E5%88%B6%E4%BD%9CWiFi%E6%9D%80%E6%89%8B/7.png" alt="img"></p><h2 id="清楚flash"><a class="markdownIt-Anchor" href="#清楚flash">#</a> 清楚 flash</h2><p>安装环境<br> 1.python<br>2. 安装 pip<br>3. 利用 pip 安装 esptool 和 pyserial<br> 在 script 目录下执行 esptool --prot comX erase_flash</p><p><img src="https://tompikachu.oss-cn-beijing.aliyuncs.com/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/esp6822%E5%88%B6%E4%BD%9CWiFi%E6%9D%80%E6%89%8B/8.png" alt="image-20220728180552537"></p><p>清楚成功 python 环境和安装 pip 网上有一大堆教程自己去搜就可以了</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;所需工具下载：&lt;a href=&quot;https://pan.baidu.com/s/1q7BB-8wZKcJey0ZKwWeTKg&quot;&gt;https://pan.baidu.com/s/1q7BB-8wZKcJey0ZKwWeTKg&lt;/a&gt; 提取码 nll8&lt;br&gt;
+ 官方地址：&lt;</summary>
+      
+    
+    
+    
+    <category term="art" scheme="http://example.com/categories/art/"/>
+    
+    
+    <category term="硬件" scheme="http://example.com/tags/%E7%A1%AC%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows7安装vmware tools报错</title>

@@ -1,9 +1,11 @@
+http://example.com/2022/07/28/esp%208266%E5%88%B6%E4%BD%9Cwifi%E6%9D%80%E6%89%8B/
 http://example.com/2022/07/24/Windows7%E5%AE%89%E8%A3%85vmware-tools%E6%8A%A5%E9%94%99/
 http://example.com/2022/07/13/hexo%E6%90%AD%E5%BB%BA/
 http://example.com/2022/07/21/phpstudy%E5%90%8E%E9%97%A8/
 http://example.com/
 http://example.com/tags/vmware-tools%E5%AE%89%E8%A3%85%E6%8A%A5%E9%94%99/
 http://example.com/tags/hexo/
+http://example.com/tags/%E7%A1%AC%E4%BB%B6/
 http://example.com/tags/phpstudy%E5%90%8E%E9%97%A8%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/
 http://example.com/categories/art/
 http://example.com/categories/web/
